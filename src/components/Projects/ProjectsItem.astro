@@ -27,10 +27,10 @@ const path = `/projects/${image}`;
 
 <section class="group">
   <div
-    class="relative text-white bg-[#1a1a1a] border-1 rounded-xl p-3 bg-cover bg-center">
+    class="relative text-white bg-[#1a1a1a] border-1 rounded-xl p-3 bg-cover bg-center w-full">
     <!-- <div class="relative min-h-14"> -->
-    <div class="flex flex-row items-center gap-1">
-      <h1 class="text-2xl">{Title}</h1>
+    <div class="flex flex-row items-center gap-1 mx-1">
+      <h1 class="text-3xl md:text-2xl lg:text-xl">{Title}</h1>
       <div class="flex">
         <a
           href={urlCode}
@@ -39,21 +39,19 @@ const path = `/projects/${image}`;
           class="size-7 rounded-full group-hover:bg-blue-500">
           <Github class="size-7" /></a
         >
-        <a
-          href={urlSite}
-          target="_blank"
-          rel="noreferrer"
-          class="size-7">
+        <a href={urlSite} target="_blank" rel="noreferrer" class="size-7">
           <Live class="size-7 group-hover:stroke-blue-500" />
         </a>
       </div>
     </div>
-    <p class="text-pretty text-sm text-gray-400">{tagline}</p>
+    <p class="text-pretty text-2xl md:text-lg lg:text-base text-gray-400 mx-1">
+      {tagline}
+    </p>
     <!-- <div
         class="absolute size-10 bg-black rounded-full top-0 right-2 text-base group-hover:bg-blue-600">
       </div> -->
 
-    <div
+    <!-- <div
       class="absolute right-2 top-1/2 transform translate-y-1/2 h-5 w-7 flex flex-col justify-center items-center py-2 gap-1 opacity-0 group-hover:opacity-100 shadow-lg">
       {
         technologies.map((tech) => {
@@ -72,12 +70,11 @@ const path = `/projects/${image}`;
           ) : null;
         })
       }
-    </div>
-    <!-- </div> -->
+    </div> -->
 
-    <div class="relative mr-8 mt-1 mb-0">
+    <div class="relative mx-1 mt-1 mb-0">
       <a href={urlSite} target="_blank" rel="noreferrer">
-        <img class="border rounded-xl" src={path} />
+        <img class="border rounded-xl" src={path} alt={`${title} img`} />
       </a>
     </div>
   </div>
