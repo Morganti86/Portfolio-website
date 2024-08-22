@@ -1,0 +1,18 @@
+---
+import { EXPERIENCE } from "./ExperienceList.astro";
+import ExperienceItem from "./ExperienceItem.astro";
+---
+
+<section>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+      EXPERIENCE.map((exp) => {
+        return (
+          <li class="mb-6 ms-5">
+            <ExperienceItem {...exp} />
+          </li>
+        );
+      })
+    }
+  </ol>
+</section>
