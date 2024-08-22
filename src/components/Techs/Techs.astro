@@ -1,0 +1,12 @@
+---
+import TechsItem from "./TechsItem.astro";
+import { TECHSLIST } from "./TechsList.astro";
+---
+<section>
+  <div class="flex flex-row flex-wrap">
+    {
+      TECHSLIST.map((skill) => (
+        <TechsItem {...skill} />
+    ))}
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+export interface Props {
+  name: string;
+  image: string;
+  image2?: string;
+}
+
+const { name, image, image2 } = Astro.props;
+
+const path = `/techs/${image}`;
+const path2 = `/techs/${image2}`;
+---
+
+<section>
+  <div class="flex flex-col flex-wrap justify-center items-center gap-1 mr-3 mb-3">
+    <img src={path || path2} width={55} height={55} alt={name} />
+    <h5 class="text-sm opacity-85">{name}</h5>
+  </div>
+</section>
