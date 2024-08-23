@@ -12,28 +12,16 @@ const description =
 ---
 
 <Layout title={title} description={description}>
-  <main>
-    <section>
-      <Navbar />
-      <Hero />
-      <h2 id="Experience" class="text-3xl font-semibold mt-12 mb-5">
-        EXPERIENCE
-      </h2>
-      <Experience />
-      <h2 id="Techs" class="text-3xl font-semibold mt-12 mb-5">TECH STACK</h2>
-      <Techs />
-      <h2 id="Projects" class="text-3xl font-semibold mt-12 mb-5">PROJECTS</h2>
-      <Projects />
-    </section>
-  </main>
-
-  <style>
-    main {
-      margin: 0;
-      /* width: calc(100% - 2rem); */
-      color: white;
-      font-size: 20px;
-      line-height: 1.6;
-    }
-  </style>
+  <section id="Home">
+    <Navbar />
+    <Hero />
+    <h2 id="Experience" class="text-3xl font-semibold mt-12 mb-5">
+      EXPERIENCE
+    </h2>
+    <Experience />
+    <h2 id="Techs" class="text-3xl font-semibold mt-12 mb-5">TECH STACK</h2>
+    <Techs />
+    <h2 id="Projects" class="text-3xl font-semibold mt-12 mb-5">PROJECTS</h2>
+    <Projects />
+  </section>
 </Layout>

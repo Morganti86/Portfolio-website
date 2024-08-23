@@ -1,8 +1,42 @@
-<header class="py-5 w-[800px] mx-auto">
-  <nav class="flex justify-center items-center flex-row gap-10 opacity-80 text-xl">
-    <a href="#Home">Home</a>
-    <a href="#Experience">Experience</a>
-    <a href="#Projects">Projects</a>
-    <a href="#Contact">Contact</a>
+---
+const NAVBARLIST = [
+  {
+    label: "HOME",
+    route: "#Home",
+  },
+  {
+    label: "EXPERIENCE",
+    route: "#Experience",
+  },
+  {
+    label: "TECHS",
+    route: "#Techs",
+  },
+  {
+    label: "PROJECTS",
+    route: "#Projects",
+  },
+  {
+    label: "CONTACT",
+    route: "#Contact",
+  },
+];
+---
+
+<header
+  class="fixed top-0 z-10 mt-8 rounded-full flex items-center w-[900px] justify-center">
+  <!-- <header
+    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"> -->
+  <!-- <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"> -->
+  <nav
+    class="flex px-5 py-2 justify-center items-center rounded-full gap-8 opacity-80 bg-gray-600 text-base md:text-sm">
+    {
+      NAVBARLIST.map((nav) => (
+        <a class="relative block hover:text-blue-400" href={nav.route}>
+          {nav.label}
+        </a>
+      ))
+    }
   </nav>
 </header>
