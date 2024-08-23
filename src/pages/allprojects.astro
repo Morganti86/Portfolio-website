@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { PROJECTS } from "../components/Projects/ProjectsList.astro";
+import ProjectsItem from "../components/Projects/ProjectsItem.astro";
+import Arrow from "../icons/Arrow.astro";
+
+const title = "Morganti86 - Software Developer Portfolio";
+const description =
+  "Responsive portfolio website showcasing projects, experience, and skills with Astro, Tailwind CSS, and TypeScript. Optimized for a seamless user experience.";
+---
+
+<Layout title={title} description={description}>
+  <section>
+    <h2 id="Projects" class="text-3xl font-semibold mt-12 mb-5">PROJECTS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {
+        PROJECTS.map((project) => (
+          <div>
+            <ProjectsItem {...project} />
+          </div>
+        ))
+      }
+    </div>
+    <a href="/#Projects" class="w-fit flex flex-row gap-1 text-3xl my-5 ml-auto"
+      ><Arrow class="size-10 rotate-180" />GO BACK
+    </a>
+  </section>
+</Layout>

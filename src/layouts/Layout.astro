@@ -1,6 +1,4 @@
 ---
-import Navbar from "../components/Navbar/Navbar.astro";
-
 interface Props {
   title: string;
   description: string;
@@ -19,39 +17,38 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="max-w-5xl min-w-min mx-8 sm:mx-8 lg:mx-24 xl:mx-48">
-    <Navbar />
+  <body class="flex flex-col min-h-screen mx-auto px-12 w-5xl">
     <slot />
   </body>
-</html>
-
-<style is:global>
-  :root {
-    color-scheme: light dark;
-  }
-  html {
-    font-family: "Inter Variable", system-ui, sans-serif;
-    scroll-behavior: smooth;
-
-    /* background: #13151a; */
-  }
-
-  body {
-    background-color: #050505;
-    color: white;
-    /* margin: 0 12%; */
-    /* padding: 0 10%; */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* width: 100%; */
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
+  
+  <style is:global>
+    :root {
+      color-scheme: light dark;
     }
-  }
-</style>
+    html {
+      font-family: "Inter Variable", system-ui, sans-serif;
+      scroll-behavior: smooth;
+
+      /* background: #13151a; */
+    }
+
+    body {
+      background-color: #050505;
+      color: white;
+      /* margin: 0 12%; */
+      /* padding: 0 10%; */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 1000px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</html>
