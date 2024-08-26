@@ -5,6 +5,8 @@ import Hero from "../components/Hero/Hero.astro";
 import Experience from "../components/Experience/Experience.astro";
 import Techs from "../components/Techs/Techs.astro";
 import Projects from "../components/Projects/Projects.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import Code from "../icons/Code.astro";
 
 const title = "Morganti86 - Software Developer Portfolio";
 const description =
@@ -15,17 +17,35 @@ const description =
   <section id="Home">
     <Navbar />
     <Hero />
-    <h2 id="Experience" class="text-6xl md:text-4xl italic mt-20 mb-5">
-      EXPERIENCE
-    </h2>
+
+    <div class="container">
+      <Code class="size-16 md:size-10" /><h2
+        id="Experience"
+        class="text-6xl md:text-4xl italic">
+        EXPERIENCE
+      </h2>
+    </div>
     <Experience />
-    <h2 id="Techs" class="text-6xl md:text-4xl italic mt-20 mb-5">
-      TECH STACK
-    </h2>
+    <div class="container">
+      <Code class="size-16 md:size-10" />
+      <h2 id="Techs" class="text-6xl md:text-4xl italic">TECH STACK</h2>
+    </div>
     <Techs />
-    <h2 id="Projects" class="text-6xl md:text-4xl italic mt-20 mb-5">
-      PROJECTS
-    </h2>
+    <div class="container">
+      <Code class="size-16 md:size-10" />
+      <h2 id="Projects" class="text-6xl md:text-4xl italic">PROJECTS</h2>
+    </div>
     <Projects />
   </section>
 </Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 5rem;
+    margin-bottom: 1.25rem;
+    /* flex flex-row gap-1 mt-20 mb-5 */
+  }
+</style>

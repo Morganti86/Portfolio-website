@@ -32,16 +32,21 @@ const path = `/projects/${image}`;
     <p class="text-pretty text-3xl md:text-lg lg:text-base text-gray-400 mx-1">
       {tagline}
     </p>
-    <div class="absolute right-5 top-6 flex flex-row gap-1 opacity-75 group-hover:opacity-100">
-      <a href={urlSite} target="_blank" rel="noreferrer" class="size-10">
-        <Live2 class="size-10 scale-110" />
+    <div
+      class="absolute right-5 top-6 md:top-8 lg:top-6 flex flex-row gap-1 opacity-75 group-hover:opacity-100">
+      <a
+        href={urlSite}
+        target="_blank"
+        rel="noreferrer"
+        class="size-16 md:size-10">
+        <Live2 class="size-16 md:size-10 scale-110" />
       </a>
       <a
         href={urlCode}
         target="_blank"
         rel="noreferrer"
-        class="size-10 rounded-full bg-blue-500">
-        <Github class="size-10" /></a
+        class="size-16 md:size-10 rounded-full bg-blue-500">
+        <Github class="size-16 md:size-10" /></a
       >
     </div>
     <!-- <div
