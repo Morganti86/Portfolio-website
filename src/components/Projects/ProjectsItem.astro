@@ -1,7 +1,6 @@
 ---
 import { TECHSLIST } from "../Techs/TechsList.astro";
 import Github from "../../icons/Github.astro";
-import Live from "../../icons/Live.astro";
 import Live2 from "../../icons/Live2.astro";
 
 export interface Props {
@@ -33,20 +32,20 @@ const path = `/projects/${image}`;
       {tagline}
     </p>
     <div
-      class="absolute right-5 top-6 md:top-8 lg:top-6 flex flex-row gap-1 opacity-75 group-hover:opacity-100">
+      class="absolute right-5 top-6 md:top-10 lg:top-8 flex flex-row gap-[1px] opacity-75 group-hover:opacity-100">
       <a
         href={urlSite}
         target="_blank"
         rel="noreferrer"
-        class="size-16 md:size-10">
-        <Live2 class="size-16 md:size-10 scale-110" />
+        class="size-16 md:size-9">
+        <Live2 class="size-16 md:size-8 scale-110" />
       </a>
       <a
         href={urlCode}
         target="_blank"
         rel="noreferrer"
-        class="size-16 md:size-10 rounded-full bg-blue-500">
-        <Github class="size-16 md:size-10" /></a
+        class="size-16 md:size-8 rounded-full bg-blue-500">
+        <Github class="size-16 md:size-8" /></a
       >
     </div>
     <!-- <div

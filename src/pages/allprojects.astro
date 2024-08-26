@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { PROJECTS } from "../components/Projects/ProjectsList.astro";
 import ProjectsItem from "../components/Projects/ProjectsItem.astro";
 import Arrow from "../icons/Arrow.astro";
+import Code from "../icons/Code.astro";
 
 const title = "Morganti86 - Software Developer Portfolio";
 const description = "Dive into a comprehensive collection of my projects!";
@@ -10,9 +11,10 @@ const description = "Dive into a comprehensive collection of my projects!";
 
 <Layout title={title} description={description}>
   <section>
-    <h2 id="Projects" class="text-6xl md:text-4xl italic mt-20 mb-5">
-      PROJECTS
-    </h2>
+    <div class="container">
+      <Code class="size-16 md:size-10" />
+      <h2 id="Projects" class="text-6xl md:text-4xl italic">PROJECTS</h2>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       {
         PROJECTS.map((project) => (
@@ -24,8 +26,19 @@ const description = "Dive into a comprehensive collection of my projects!";
     </div>
     <a
       href="/#Projects"
-      class="w-fit flex flex-row gap-1 italic text-3xl my-5 ml-auto hover:scale-105"
-      ><Arrow class="size-10 rotate-180" />GO BACK
+      class="w-fit flex flex-row gap-1 italic text-lg my-5 ml-auto hover:scale-105"
+      ><Arrow class="size-7 rotate-180" />GO BACK
     </a>
   </section>
 </Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 5rem;
+    margin-bottom: 1.25rem;
+    /* flex flex-row gap-1 mt-20 mb-5 */
+  }
+</style>
