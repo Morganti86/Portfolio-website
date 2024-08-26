@@ -5,13 +5,14 @@ import ProjectsItem from "../components/Projects/ProjectsItem.astro";
 import Arrow from "../icons/Arrow.astro";
 
 const title = "Morganti86 - Software Developer Portfolio";
-const description =
-  "Dive into a comprehensive collection of my projects!";
+const description = "Dive into a comprehensive collection of my projects!";
 ---
 
 <Layout title={title} description={description}>
   <section>
-    <h2 id="Projects" class="text-3xl font-semibold mt-12 mb-5">PROJECTS</h2>
+    <h2 id="Projects" class="text-6xl md:text-4xl italic mt-20 mb-5">
+      PROJECTS
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       {
         PROJECTS.map((project) => (
@@ -21,7 +22,9 @@ const description =
         ))
       }
     </div>
-    <a href="/#Projects" class="w-fit flex flex-row gap-1 text-3xl my-5 ml-auto"
+    <a
+      href="/#Projects"
+      class="w-fit flex flex-row gap-1 italic text-3xl my-5 ml-auto"
       ><Arrow class="size-10 rotate-180" />GO BACK
     </a>
   </section>

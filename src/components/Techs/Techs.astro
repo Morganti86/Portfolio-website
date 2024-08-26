@@ -3,7 +3,7 @@ import TechsItem from "./TechsItem.astro";
 import { TECHSLIST } from "./TechsList.astro";
 ---
 <section>
-  <div class="flex flex-row flex-wrap">
+  <div class="flex flex-row flex-wrap gap-6 md:gap-3">
     {
       TECHSLIST.map((skill) => (
         <TechsItem {...skill} />
