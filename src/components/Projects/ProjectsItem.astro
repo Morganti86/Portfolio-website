@@ -37,15 +37,17 @@ const path = `/projects/${image}`;
         href={urlSite}
         target="_blank"
         rel="noreferrer"
+        aria-label=`{View ${title} site}`
         class="size-16 md:size-9">
-        <Live2 class="size-16 md:size-8 scale-110" />
+        <Live2 class="size-16 md:size-8 scale-110" alt="external link logo" />
       </a>
       <a
         href={urlCode}
         target="_blank"
         rel="noreferrer"
+        aria-label="View code on GitHub"
         class="size-16 md:size-8 rounded-full bg-blue-500">
-        <Github class="size-16 md:size-8" /></a
+        <Github class="size-16 md:size-8" alt="github logo" /></a
       >
     </div>
     <!-- <div
