@@ -1,3 +1,15 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": true,
+    "strict": true,
+    "module": "esnext",  // Cambiado a 'esnext' para compatibilidad con bundlers modernos
+    "target": "es6",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*"
+  ]
 }

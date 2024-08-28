@@ -15,10 +15,15 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css"
+    />
+    <!-- https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/dist/toastify.min.css -->
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js -->
     <title>{title}</title>
   </head>
-  <body
-    class="flex flex-col min-h-screen mx-auto px-10 md:px-15">
+  <body class="flex flex-col min-h-screen mx-auto px-10 md:px-15">
     <slot />
   </body>
 
