@@ -1,8 +1,8 @@
 /* empty css                                       */
-import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, g as createAstro, a as renderComponent } from '../chunks/astro/server_CjRl9CB_.mjs';
+import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, g as createAstro, a as renderComponent } from '../chunks/astro/server_4QNtzGKE.mjs';
 import 'kleur/colors';
 import 'clsx';
-import { T as TECHSLIST, a as $$ProjectsItem, P as PROJECTS, b as $$Arrow, $ as $$Code, c as $$Layout } from '../chunks/Code_CTv-4NjU.mjs';
+import { T as TECHSLIST, a as $$ProjectsItem, P as PROJECTS, b as $$Arrow, $ as $$Code, c as $$Layout } from '../chunks/Code_MdDmuuc7.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 

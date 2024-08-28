@@ -1,8 +1,8 @@
-import { R as ROUTE_TYPE_HEADER, h as REROUTE_DIRECTIVE_HEADER, i as decryptString, j as createSlotValueFromString, r as renderTemplate, a as renderComponent, D as DEFAULT_404_COMPONENT, k as renderSlotToString, l as renderJSX, n as chunkToString, o as isRenderInstruction, p as clientLocalsSymbol, q as clientAddressSymbol$1, A as ASTRO_VERSION, t as responseSentSymbol$1, u as renderPage, v as REWRITE_DIRECTIVE_HEADER_KEY, w as REWRITE_DIRECTIVE_HEADER_VALUE, x as renderEndpoint, y as REROUTABLE_STATUS_CODES } from './astro/server_CjRl9CB_.mjs';
-import { A as AstroError, q as i18nNoLocaleFoundInPath, s as appendForwardSlash, t as joinPaths, R as ResponseSentError, u as MiddlewareNoDataOrNextCalled, v as MiddlewareNotAResponse, G as GetStaticPathsRequired, w as InvalidGetStaticPathsReturn, x as InvalidGetStaticPathsEntry, y as GetStaticPathsExpectedParams, z as GetStaticPathsInvalidRouteParam, B as trimSlashes, P as PageNumberParamNotFound, C as NoMatchingStaticPathFound, H as PrerenderDynamicEndpointPathCollide, J as ReservedSlotName, L as LocalsNotAnObject, K as PrerenderClientAddressNotAvailable, Q as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, T as RewriteWithBodyUsed, U as AstroResponseHeadersReassigned, V as fileExtension, W as slash, X as prependForwardSlash, Y as removeTrailingForwardSlash } from './astro/assets-service_hu8gJn31.mjs';
+import { R as ROUTE_TYPE_HEADER, h as REROUTE_DIRECTIVE_HEADER, i as decryptString, j as createSlotValueFromString, r as renderTemplate, a as renderComponent, D as DEFAULT_404_COMPONENT, k as renderSlotToString, l as renderJSX, n as chunkToString, o as isRenderInstruction, p as clientLocalsSymbol, q as clientAddressSymbol$1, A as ASTRO_VERSION, t as responseSentSymbol$1, u as renderPage, v as REWRITE_DIRECTIVE_HEADER_KEY, w as REWRITE_DIRECTIVE_HEADER_VALUE, x as renderEndpoint, y as REROUTABLE_STATUS_CODES } from './astro/server_4QNtzGKE.mjs';
+import { A as AstroError, q as i18nNoLocaleFoundInPath, s as appendForwardSlash, t as joinPaths, R as ResponseSentError, u as MiddlewareNoDataOrNextCalled, v as MiddlewareNotAResponse, G as GetStaticPathsRequired, w as InvalidGetStaticPathsReturn, x as InvalidGetStaticPathsEntry, y as GetStaticPathsExpectedParams, z as GetStaticPathsInvalidRouteParam, B as trimSlashes, P as PageNumberParamNotFound, C as NoMatchingStaticPathFound, H as PrerenderDynamicEndpointPathCollide, J as ReservedSlotName, L as LocalsNotAnObject, K as PrerenderClientAddressNotAvailable, Q as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, T as RewriteWithBodyUsed, U as AstroResponseHeadersReassigned, V as fileExtension, W as slash, X as prependForwardSlash, Y as removeTrailingForwardSlash } from './astro/assets-service_DQyTf1uX.mjs';
 import { serialize, parse } from 'cookie';
 import { bold, red, yellow, dim, blue } from 'kleur/colors';
-import { g as getActionQueryString, d as deserializeActionResult, e as ensure404Route, a as default404Instance, D as DEFAULT_404_ROUTE } from './astro-designed-error-pages_DVfL9kIf.mjs';
+import { g as getActionQueryString, d as deserializeActionResult, e as ensure404Route, a as default404Instance, D as DEFAULT_404_ROUTE } from './astro-designed-error-pages_CB4fbUDh.mjs';
 import 'clsx';
 import 'fast-glob';
 import nodePath from 'node:path';
@@ -1546,8 +1546,10 @@ class RenderContext {
   }
   createAPIContext(props, isPrerendered) {
     const context = this.createActionAPIContext();
+    const redirect = (path, status = 302) => new Response(null, { status, headers: { Location: path } });
     return Object.assign(context, {
       props,
+      redirect,
       getActionResult: createGetActionResult(context.locals),
       callAction: createCallAction(context),
       // Used internally by Actions middleware.
@@ -1582,7 +1584,6 @@ class RenderContext {
     const renderContext = this;
     const { cookies, params, pipeline, url } = this;
     const generator = `Astro v${ASTRO_VERSION}`;
-    const redirect = (path, status = 302) => new Response(null, { status, headers: { Location: path } });
     const rewrite = async (reroutePayload) => {
       return await this.#executeRewrite(reroutePayload);
     };
@@ -1614,7 +1615,6 @@ class RenderContext {
       get preferredLocaleList() {
         return renderContext.computePreferredLocaleList();
       },
-      redirect,
       rewrite,
       request: this.request,
       site: pipeline.site,
