@@ -1,0 +1,28 @@
+---
+import Code from "../../icons/Code.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+let Title = title.toUpperCase()
+---
+
+<div class="container">
+    <Code class="size-16 md:size-10" />
+    <h2 id={title} class="text-7xl md:text-4xl italic">{Title}</h2>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 5rem;
+    margin-bottom: 1.50rem;
+    /* color: #3b82f6; */
+    /* color: #3a67fa; */
+    color: ivory;
+  }
+</style>
