@@ -1,11 +1,13 @@
 ---
 interface Props {
     href: string,
+    download?:string,
 }
-const { href } = Astro.props;
+const { href, download } = Astro.props;
 ---
 <a class="flex items-center justify-center border rounded-lg border-blue-500 size-20 md:size-10 hover:border-blue-400"
     href={href}
+    download={download}
     target="_blank"
     rel="noopener noreferrer"
     role="link">
