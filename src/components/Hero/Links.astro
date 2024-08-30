@@ -1,28 +1,38 @@
 ---
 import Linkedin from "../../icons/Linkedin.astro";
-import Cv from "../../icons/Cv.astro";
 import Github from "../../icons/Github.astro";
+import Cv2 from "../../icons/Cv2.astro";
+import Button from "../UI/Button.astro";
+import ButtonRF from "../UI/ButtonRF.astro";
 ---
 
-<div class="flex flex-row gap-3">
-  <!-- <Badge>Disponible para trabajar</Badge> -->
-  <a
-    href="https://www.linkedin.com/in/marianomorganti/"
-    target="_blank"
-    rel="noopener noreferrer"
-    role="link">
-    <Linkedin class={"size-12"} />
-  </a>
-  <a
-    href="CV - MARIANO MORGANTI - WEB DEVELOPER.pdf"
-    download="CV - MARIANO MORGANTI - WEB DEVELOPER.pdf">
-    <Cv class={"size-12"} />
-  </a>
-  <a
-    href="https://github.com/Morganti86"
-    target="_blank"
-    rel="noopener noreferrer"
-    role="link">
-    <Github class={"size-12"} />
-  </a>
+<div class="flex flex-row gap-4 items-center">
+<ButtonRF href="https://www.linkedin.com/in/marianomorganti/" text="AVAILABLE FOR OPPORTUNITIES">
+  <span class="h-[0.5em] w-[0.5em] rounded-full bg-blue-700 shadow-glow animate-glow"></span>
+</ButtonRF>
+  <!-- <a class="flex items-center gap-3 text-blue-400 font-normal md:font-medium rounded-full  text-3xl md:text-base px-5 py-2 text-center border border-blue-500 hover:border-blue-400"><span class="h-[0.5em] w-[0.5em] rounded-full bg-blue-700 shadow-glow animate-glow"></span>AVAILABLE FOR OPPORTUNITIES</a> -->
+  <!-- <div class="flex flex-row gap-4 items-stretch">  -->
+  <Button href="https://www.linkedin.com/in/marianomorganti/"><Linkedin class="size-8 md:size-6" />
+  <Button href="CV - MARIANO MORGANTI - WEB DEVELOPER.pdf"><Cv2 class="size-10 md:size-7" />
+  <Button href="https://github.com/Morganti86"><Github class="size-9 md:size-6" />
 </div>
+
+<style>
+  @keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 2px 2px rgba(59, 130, 246, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 3px 3px rgba(59, 130, 246, 1);
+  }
+}
+
+.shadow-glow {
+  box-shadow: 0 0 2px 2px rgba(59, 130, 246, 0.7);
+}
+
+.animate-glow {
+  animation: glow 1.5s infinite alternate;
+}
+
+</style>
